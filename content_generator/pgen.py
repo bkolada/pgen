@@ -16,7 +16,7 @@ def generate_article():
     path = 'content/{}.md'.format(answers['slug'])
     with codecs.open(path, 'w', encoding="utf-8") as content:
         for key, value in answers.iteritems():
-            content.write(":{}: {}\n".format(key, value))
+            content.write("{}: {}\n".format(key.capitalize(), value))
 
 
 def ask_article_questions():
